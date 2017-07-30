@@ -7,7 +7,7 @@ if defined?(ActiveRecord::Migrator) && ActiveRecord::Migrator.needs_migration?
   raise 'Migrations are pending run `rake db:migrate` to resolve the issue.'
 end
 
+use Rack::MethodOverride #lets us use patch and delete
 use LandmarksController
 use FiguresController
-use Rack::MethodOverride
 run ApplicationController

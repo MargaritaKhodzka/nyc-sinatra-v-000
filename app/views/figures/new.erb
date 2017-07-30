@@ -5,18 +5,18 @@
   <p><input type="text" name="figure[name]" id="figure_name"></p>
 
 <h3>Select title(s):</h3>
-<p><% @titles.each do |title| %>
+<% @titles.each do |title| %>
   <input type="checkbox" name="figure[title_ids][]" id="title_<%= title.id %>" value="<%= title.id %>"><%= title.name %></input>
-<% end %></p>
+<% end %>
 
 <h3>and/or, create a new Title:</h3>
 <p><label for="title[name]">Title Name:</label></p>
 <p><input type="text" name="new_title" id="title[name]"></p>
 
 <h3>Select landmark(s):</h3>
-<p><% @landmarks.each do |landmark| %>
+<% @landmarks.each do |landmark| %>
   <input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%= landmark.id %>" value="<%= landmark.id %>"><%= landmark.name %></input>
-<% end %></p>
+<% end %>
 
 <h3>and/or, create a new Landmark:</h3>
 <p><label for="landmark[name]">Landmark Name:</label></p>
